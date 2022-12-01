@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PGController">
+    <children>
+        <AnchorPane layoutX="-39.0" layoutY="-102.0" prefHeight="680.0" prefWidth="718.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="730.0" spacing="25.0">
+                    <children>
+                        <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="96.0" text="Insert Game" />
+                        <RadioButton mnemonicParsing="false" text="Insert Player" />
+                        <RadioButton mnemonicParsing="false" text="Update Player" />
+                    </children>
+                </HBox>
+                <VBox layoutX="231.0" layoutY="69.0" prefHeight="680.0" prefWidth="718.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox prefHeight="417.0" prefWidth="730.0">
+                            <children>
+                                <AnchorPane prefHeight="311.0" prefWidth="362.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" layoutX="124.0" layoutY="43.0" prefHeight="38.0" prefWidth="113.0" text="Game Insert Form">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <VBox layoutY="91.0" prefHeight="267.0" prefWidth="364.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Game Title">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="titleGame" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="362.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#createGame" text="Create" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="346.0" prefWidth="368.0">
+                                    <children>
+                                        <HBox alignment="CENTER" layoutX="4.0" layoutY="56.0" prefHeight="26.0" prefWidth="360.0" spacing="25.0">
+                                            <children>
+                                                <Label text="Display Info">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <VBox alignment="CENTER" layoutY="99.0" prefHeight="259.0" prefWidth="367.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Player ID">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="requestPlayerId" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="362.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#displayInfo" text="Display" />
+                                                    </children>
+                                                </HBox>
+                                                <TextArea fx:id="showPlayerInfo" maxWidth="300.0" prefHeight="208.0" prefWidth="300.0">
+                                                    <opaqueInsets>
+                                                        <Insets right="30.0" />
+                                                    </opaqueInsets>
+                                                </TextArea>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="398.0" prefWidth="730.0">
+                            <children>
+                                <AnchorPane prefHeight="377.0" prefWidth="364.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="100.0" layoutY="14.0" prefHeight="38.0" prefWidth="159.0" text="Player Update Form">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <VBox layoutX="-3.0" layoutY="54.0" prefHeight="303.0" prefWidth="362.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="334.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="ID">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="idPlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="First Name">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="firstNamePlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Last Name">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="lastNamePlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Address">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="addressPlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Postal Code">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="postalCodePlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="350.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Province">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="provincePlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Phone">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="phonePlayerU" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="362.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#updatePlayer" text="Update" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="354.0" prefWidth="358.0">
+                                    <children>
+                                        <Label layoutX="122.0" layoutY="17.0" prefHeight="38.0" prefWidth="113.0" text="Player Insert Form">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <VBox layoutX="-3.0" layoutY="54.0" prefHeight="303.0" prefWidth="362.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="ID">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="idPlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="First Name">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="firstNamePlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Last Name">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="lastNamePlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Address">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="addressPlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Postal Code">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="postalCodePlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Province">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="provincePlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="362.0" spacing="20.0">
+                                                    <children>
+                                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="70.0" text="Phone">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="phonePlayerI" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="362.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#createPlayer" text="Create" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
